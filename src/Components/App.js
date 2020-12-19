@@ -12,7 +12,7 @@ const Container = styled.div`
 
 const Header = styled.div`
   display: flex;
-  height: 5vh;
+  height: 7vh;
   width: 100%;
 `;
 
@@ -22,7 +22,7 @@ const Title = styled.div`
   justify-content: space-between;
   padding: 0px 20px;
   width: 100%;
-  height: 11.7vh;
+  height: 9.7vh;
   background-color: #212121;
   color: white;
   font-size: 3.5rem;
@@ -77,7 +77,15 @@ class App extends React.Component {
           <GlobalStyles />
           <Container>
             <Title>
-              INTERNATIONAL DEPARTURES <Author>made by Dave</Author>
+              <img
+                src={
+                  "https://lh3.google.com/u/0/d/1m1ekXaHnxuDhFFD3jshHL1Iwj43b3u9J=w3840-h1902-iv2"
+                }
+                alt="None"
+                style={{ width: "100px" }}
+              />
+              INTERNATIONAL DEPARTURES
+              <Author>made by Dave</Author>
             </Title>
             <Header>
               <HeaderItem>Status</HeaderItem>

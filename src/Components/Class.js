@@ -3,16 +3,31 @@ import styled from "styled-components";
 import { Read, Ref } from "../fbase";
 
 const Container = styled.div`
-  cursor: pointer;
   height: 17%;
   display: flex;
   align-items: center;
-  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
   background-color: #4c8bf5;
-  transition: all 0.5s;
+  transition: all 1.2s;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
 `;
 
 const Box = styled.div`
+  :nth-child(3) button {
+    cursor: pointer;
+    border: none;
+    width: 30%;
+    height: 50%;
+    background: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    outline: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+  :nth-child(3) {
+    justify-content: space-evenly;
+  }
   height: 100%;
   width: 25%;
   display: flex;
@@ -21,10 +36,7 @@ const Box = styled.div`
   border-radius: inherit;
   font-size: 1.8rem;
   font-weight: 800;
-  border-right: 2px solid #212121;
-  :last-child {
-    border: none;
-  }
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
 `;
 
 const Class = ({ ClassName, value, destination, distance }) => {
@@ -39,15 +51,19 @@ const Class = ({ ClassName, value, destination, distance }) => {
     const value = await Read(ClassName);
     setClicked(value);
   };
-  setInterval(setValue, 1000);
+  setInterval(setValue, 1500);
   return (
     <Container
-      onClick={onClick}
-      style={{ backgroundColor: clicked ? "#de5246" : "#4c8bf5" }}
+      style={{
+        backgroundColor: clicked ? "rgba(250, 27, 35, 0.7)" : "#0553fc",
+      }}
     >
       <Box>{clicked ? "Gate Closed" : "Gate Open"}</Box>
       <Box>{destination}</Box>
-      <Box>{ClassName}</Box>
+      <Box>
+        {ClassName}
+        <button onClick={onClick}>{clicked ? "Close" : "Open"}</button>
+      </Box>
       <Box>{distance}</Box>
     </Container>
   );
