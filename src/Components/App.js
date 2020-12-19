@@ -19,24 +19,39 @@ const Header = styled.div`
 const Title = styled.div`
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  justify-content: space-between;
+  padding: 0px 20px;
   width: 100%;
-  height: 12vh;
+  height: 11.7vh;
   background-color: #212121;
   color: white;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 800;
+  border-bottom: 2px solid whitesmoke;
+`;
+
+const Author = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  font-size: 1rem;
+  color: whitesmoke;
 `;
 
 const HeaderItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   width: 25%;
   background-color: #212121;
   color: white;
+  border-right: 2px solid #212121;
+  :last-child {
+    border: none;
+  }
 `;
 
 const Body = styled.div`
@@ -61,7 +76,9 @@ class App extends React.Component {
         <>
           <GlobalStyles />
           <Container>
-            <Title>INTERNATIONAL DEPARTURES</Title>
+            <Title>
+              INTERNATIONAL DEPARTURES <Author>made by Dave</Author>
+            </Title>
             <Header>
               <HeaderItem>Status</HeaderItem>
               <HeaderItem>Destination</HeaderItem>

@@ -20,7 +20,11 @@ const Box = styled.div`
   justify-content: center;
   border-radius: inherit;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 800;
+  border-right: 2px solid #212121;
+  :last-child {
+    border: none;
+  }
 `;
 
 const Class = ({ ClassName, value, destination, distance }) => {
