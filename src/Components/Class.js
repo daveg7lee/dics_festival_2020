@@ -62,7 +62,7 @@ const Class = ({ ClassName, value, destination, distance }) => {
       <Box>{destination}</Box>
       <Box>
         {ClassName}
-        <button onClick={onClick}>{clicked ? "Close" : "Open"}</button>
+        <button onClick={onClick}>{clicked ? "Open" : "Close"}</button>
       </Box>
       <Box>{distance}</Box>
     </Container>

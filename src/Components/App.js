@@ -34,7 +34,7 @@ const Author = styled.div`
   height: 100%;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   font-size: 1rem;
   color: whitesmoke;
 `;
