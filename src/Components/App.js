@@ -78,11 +78,9 @@ class App extends React.Component {
           <Container>
             <Title>
               <img
-                src={
-                  "https://lh3.google.com/u/0/d/1m1ekXaHnxuDhFFD3jshHL1Iwj43b3u9J=w3840-h1902-iv2"
-                }
+                src={process.env.PUBLIC_URL + "logo192.png"}
                 alt="None"
-                style={{ width: "100px" }}
+                style={{ width: "50px" }}
               />
               INTERNATIONAL DEPARTURES
               <Author>made by Dave</Author>
